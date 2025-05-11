@@ -1,0 +1,28 @@
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.exe
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.deps.json
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.runtimeconfig.json
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.dll
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.pdb
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.GeneratedMSBuildEditorConfig.editorconfig
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.AssemblyInfoInputs.cache
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.AssemblyInfo.cs
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.csproj.CoreCompileInputs.cache
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.dll
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\refint\Puyopuyo.dll
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.pdb
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.genruntimeconfig.cache
+d:\新しいフォルダー (3)\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\ref\Puyopuyo.dll
+D:\Documents\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.exe
+D:\Documents\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.deps.json
+D:\Documents\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.runtimeconfig.json
+D:\Documents\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.dll
+D:\Documents\C#\Puyopuyo\Puyopuyo\bin\Debug\net8.0-windows\Puyopuyo.pdb
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.AssemblyInfoInputs.cache
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.AssemblyInfo.cs
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.csproj.CoreCompileInputs.cache
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.dll
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\refint\Puyopuyo.dll
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.pdb
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\Puyopuyo.genruntimeconfig.cache
+D:\Documents\C#\Puyopuyo\Puyopuyo\obj\Debug\net8.0-windows\ref\Puyopuyo.dll
