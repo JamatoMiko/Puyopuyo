@@ -165,8 +165,8 @@ public partial class Form1 : Form
             }
         }
         var nextPuyo = _nextPuyos.Dequeue();
-        mainPuyo = new Puyo(nextPuyo.Main, 2, 1);
-        subPuyo = new Puyo(nextPuyo.Sub, 2, 0);
+        mainPuyo = new Puyo(nextPuyo.Main, 2, 0);
+        subPuyo = new Puyo(nextPuyo.Sub, 2, -1);
         _angle = 1;//90
         _nextPuyos.Enqueue((random.Next(1, _numberOfColor + 1), random.Next(1, _numberOfColor + 1)));
         return true;
