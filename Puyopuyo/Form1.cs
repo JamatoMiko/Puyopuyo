@@ -553,14 +553,14 @@ public partial class Form1 : Form
         var g = e.Graphics;
         //ステージ
         g.DrawRectangle(new Pen(Color.Black), 0, CellHeight, 6 * CellWidth, 12 * CellHeight);
-        
+        /*
         for (int y = 0; y < StageHeight - 1; y++){
             for (int x = 0; x < StageWidth; x++)
             {
                 g.DrawRectangle(new Pen(Color.Black), x * CellWidth, (y + 1) * CellHeight, CellWidth, CellHeight);
             }
         }
-        
+        */
         //バツ印
         g.FillPolygon(
             new SolidBrush(Color.Red),
