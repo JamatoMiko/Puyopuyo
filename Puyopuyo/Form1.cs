@@ -1,9 +1,10 @@
 using System.Diagnostics;
+using System.Drawing.Drawing2D;
 using System.Linq;
 
 namespace Puyopuyo;
 
-//TODO クイックターン（左右が挟まれているときに一回の回転で上下反転）、アニメーションの遅延frame、連結状態がわかるように差分、CPU対戦
+//TODO アニメーションの遅延frame、連結状態がわかるように差分、CPU対戦
 
 public partial class Form1 : Form
 {
@@ -379,11 +380,13 @@ public partial class Form1 : Form
                 targetAngle = 0;
             if (targetAngle < 0)
                 targetAngle = 3;
-            //目標のマスが衝突する場合メインぷよを押し返す、押し返した先が衝突する場合回転させない
+            //目標のマスが衝突する場合メインぷよを押し返す、押し返した先が衝突する場合回転させない→さらに回転させる（クイックターン）
             if (Puyo.Collider(mainPuyo.CellX + _offsets[targetAngle].X, mainPuyo.CellY + _offsets[targetAngle].Y))
             {
                 if (Puyo.Collider(mainPuyo.CellX - _offsets[targetAngle].X, mainPuyo.CellY - _offsets[targetAngle].Y))
                 {
+                    _angle = targetAngle;
+                    RotatePuyo(direction);//更に回転させる
                     return;
                 }
                 if (_offsets[targetAngle].X != 0)//変更がある場合のみ
@@ -550,14 +553,14 @@ public partial class Form1 : Form
         var g = e.Graphics;
         //ステージ
         g.DrawRectangle(new Pen(Color.Black), 0, CellHeight, 6 * CellWidth, 12 * CellHeight);
-        /*
+        
         for (int y = 0; y < StageHeight - 1; y++){
             for (int x = 0; x < StageWidth; x++)
             {
                 g.DrawRectangle(new Pen(Color.Black), x * CellWidth, (y + 1) * CellHeight, CellWidth, CellHeight);
             }
         }
-        */
+        
         //バツ印
         g.FillPolygon(
             new SolidBrush(Color.Red),
@@ -596,7 +599,6 @@ public partial class Form1 : Form
         foreach (var puyo in drawingPuyos)
         {
             DrawPuyo(g, Puyo.PuyoColor[puyo.Type], puyo.PositionX, puyo.PositionY);
-            //g.DrawString($"{puyo.Speed}", new Font("Arial", 8), new SolidBrush(Color.Black), puyo.PositionX, puyo.PositionY);
         }
         //着地点
         if (mainPuyo != null)
@@ -605,7 +607,7 @@ public partial class Form1 : Form
             if (_angle == 3)
                 cy = 1;
             if (mainPuyo.TargetY > 0)
-                g.DrawEllipse(new Pen(Puyo.PuyoColor[mainPuyo.Type]), mainPuyo.TargetX * CellWidth, (mainPuyo.TargetY - cy)* CellHeight, CellWidth, CellHeight);
+                g.DrawEllipse(new Pen(Puyo.PuyoColor[mainPuyo.Type]), mainPuyo.TargetX * CellWidth + 1, (mainPuyo.TargetY - cy)* CellHeight + 1, CellWidth - 2, CellHeight - 2);
         }
         if (subPuyo != null)
         {
@@ -613,7 +615,7 @@ public partial class Form1 : Form
             if (_angle == 1)
                 cy = 1;
             if (subPuyo.TargetY > 0)
-                g.DrawEllipse(new Pen(Puyo.PuyoColor[subPuyo.Type]), subPuyo.TargetX * CellWidth, (subPuyo.TargetY - cy) * CellHeight, CellWidth, CellHeight);
+                g.DrawEllipse(new Pen(Puyo.PuyoColor[subPuyo.Type]), subPuyo.TargetX * CellWidth + 1, (subPuyo.TargetY - cy) * CellHeight + 1, CellWidth - 2, CellHeight - 2);
         }
         //れんさ
         if (_chain > 0)
@@ -654,10 +656,10 @@ public partial class Form1 : Form
     }
     void DrawPuyo(Graphics g, Color color, int px, int py)//ぷよの描画
     {
-        g.FillEllipse(new SolidBrush(color), px, py, CellWidth, CellHeight);
-        g.FillEllipse(new SolidBrush(Color.White), px, py + 2, CellWidth / 2, CellHeight / 2);
-        g.FillEllipse(new SolidBrush(Color.White), px + CellWidth / 2, py + 2, CellWidth / 2, CellHeight / 2);
-        g.FillEllipse(new SolidBrush(color), px + CellWidth / 4 - 1, py + 4, CellWidth / 4, CellHeight / 4);
-        g.FillEllipse(new SolidBrush(color), px + CellWidth / 2 + 1, py + 4, CellWidth / 4, CellHeight / 4);
+        g.FillEllipse(new SolidBrush(color), px + 1, py + 1, CellWidth - 2, CellHeight - 2);
+        g.FillEllipse(new SolidBrush(Color.White), px + 1, py + 1 + 2, (CellWidth - 2) / 2, (CellHeight - 2) / 2);
+        g.FillEllipse(new SolidBrush(Color.White), px + 1 + CellWidth / 2, py + 1 + 2, (CellWidth - 2) / 2, (CellHeight - 2) / 2);
+        g.FillEllipse(new SolidBrush(color), px + 1 + CellWidth / 4 - 1, py + 1 + 4, (CellWidth - 2) / 4, (CellHeight - 2) / 4);
+        g.FillEllipse(new SolidBrush(color), px + 1 + CellWidth / 2 + 1, py + 1 + 4, (CellWidth - 2) / 4, (CellHeight - 2) / 4);
     }
 }

@@ -10,7 +10,8 @@ public class Puyo
         {4, Color.Green},
         {5, Color.Purple}
     };
-    public static List <Puyo> puyos = new();//存在しているぷよのリスト（組ぷよ以外）
+    //存在しているぷよのリスト（組ぷよ以外）
+    public static List <Puyo> puyos = new();
     //ぷよのタイプ
     public int Type { get; set; }
     //現在の座標
